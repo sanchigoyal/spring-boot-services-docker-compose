@@ -15,6 +15,7 @@ HELP.md
 .sts4-cache
 
 ### IntelliJ IDEA ###
+.idea
 /mail-service/.idea
 /address-service/.idea
 *.iws

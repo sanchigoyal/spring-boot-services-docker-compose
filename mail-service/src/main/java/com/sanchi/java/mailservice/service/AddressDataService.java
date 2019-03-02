@@ -18,6 +18,7 @@ public class AddressDataService {
 
   public Address getAddress(int memberId) {
     String url = String.format("%s/%s/address", addressServiceBasePath, memberId);
+    System.out.println("Fetching address using ---->" + url);
     ResponseEntity<Address> response = restTemplate.getForEntity(url, Address.class);
     return response.getBody();
   }

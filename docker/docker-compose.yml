@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  address-service:
+    build:
+      context: ../address-service
+      dockerfile: ./Dockerfile
+    ports:
+    - 8085:8085
+
+  mail-service:
+    build:
+      context: ../mail-service
+      dockerfile: ./Dockerfile
+    ports:
+    - 8086:8086
+    environment:
+    - ADDRESS_SERVICE_BASE_PATH=http://address-service:8085/address-service
+    depends_on:
+    - address-service
