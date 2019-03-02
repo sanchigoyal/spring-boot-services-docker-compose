@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "6a1bd69e-a03a-4c08-9571-f5cf2f421435",
+		"name": "Spring - Mail Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Mail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"from\": \"sender\",\n\t\"timestamp\": \"2019-02-18T13:29:14.449\",\n\t\"message\": \"Hello Docker\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8086/mail-service/1/mails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"mail-service",
+						"1",
+						"mails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Mails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8086/mail-service/1/mails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"mail-service",
+						"1",
+						"mails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
